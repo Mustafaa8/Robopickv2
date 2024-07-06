@@ -4,13 +4,15 @@
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest",
-    "drizzle-kit": "^0.22.8"
+    "bun-types": "^1.1.18",
+    "drizzle-kit": "^0.22.8",
+    "ts-node": "^10.9.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "dev":"bun --hot index.ts"
+    "dev": "bun --hot index.ts"
   },
   "dependencies": {
     "@types/express": "^4.17.21",

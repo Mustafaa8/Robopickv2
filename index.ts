@@ -1,6 +1,6 @@
 import express from 'express';
 import type { Request, Response, NextFunction } from 'express'
-import api from './api';
+import api from './api.ts';
 import db from './db/db.ts';
 import schema from './db/schema.ts';
 const app = express();
