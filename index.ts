@@ -1,14 +1,16 @@
 import express from 'express';
 import type { Request, Response, NextFunction } from 'express'
-import api from './api.ts';
+import api from './routes/api.ts';
 import db from './db/db.ts';
 import schema from './db/schema.ts';
+import services from './routes/services';
 const app = express();
 app.set('view engine','ejs')
 app.set('views','./views')
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended:true }))
 app.use('/records',api)
+app.use('/services',services)
 app.get('/',(req,res)=>{
     res.render('index.ejs')
 })

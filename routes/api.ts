@@ -1,6 +1,6 @@
 import {Router} from 'express';
-import db from './db/db.ts'
-import schema from './db/schema.ts' 
+import db from '../db/db.ts'
+import schema from '../db/schema.ts' 
 import {eq} from 'drizzle-orm'
 const api = Router();
 
