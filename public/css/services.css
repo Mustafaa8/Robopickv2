@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+header .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav li {
+    padding: 0px 10px;
+    border-radius: 10px;
+    transition: all .2s;
+}
+
+.navbar-nav li:hover {
+    background-color: #f0f0f0;
+}
+
+.navbar-nav li a {
+    transition: color .2s;
+}
+
+.navbar-nav li:hover a {
+    color: #000;
+}
+
+.my-nav {
+    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent background */
+}
+
+.card {
+    background-color: azure;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit; /* Ensure text inherits color to avoid link styling */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.icon i {
+    color: rgb(10, 117, 160);
+}
+
+.info h3 {
+    color: rgb(10, 117, 160);
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.footer .social-icons a {
+    font-size: 1.5em;
+    margin: 0 10px;
+}
+
+.footer {
+    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent background */
+}
+
+.row {
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+section a {
+    text-decoration: none;
+}
