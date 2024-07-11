@@ -1,0 +1,9 @@
+services:
+  web:
+    image: mostafaa8/ui:1
+    restart: on-failure
+    container_name: UI
+    volumes:
+      - "./web_application:/var/lib/webapp/data:rw"
+    ports:
+      - "8080:3400"

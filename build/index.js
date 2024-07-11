@@ -21964,9 +21964,9 @@ var require_express2 = __commonJS((exports, module) => {
 });
 
 // index.ts
-var import_express2 = __toESM(require_express2(), 1);
+var import_express3 = __toESM(require_express2(), 1);
 
-// api.ts
+// routes/api.ts
 var import_express = __toESM(require_express2(), 1);
 
 // db/db.ts
@@ -25057,7 +25057,7 @@ var schema = sqliteTable("points", {
 });
 var schema_default = schema;
 
-// api.ts
+// routes/api.ts
 var api = import_express.Router();
 api.get("/", async (req, res) => {
   let allpoints = await db_default.select().from(schema_default);
@@ -25078,13 +25078,31 @@ api.get("/first", async (req, res, next) => {
 });
 var api_default = api;
 
+// routes/services.ts
+var import_express2 = __toESM(require_express2(), 1);
+var services = import_express2.Router();
+services.get("/", (req, res) => {
+  res.render("services.ejs");
+});
+services.get("/catalog", (req, res) => {
+  res.render("catalog.ejs");
+});
+services.get("/robot", (req, res) => {
+  res.render("robot.ejs");
+});
+services.get("/about", (req, res) => {
+  res.render("about.ejs");
+});
+var services_default = services;
+
 // index.ts
-var app = import_express2.default();
+var app = import_express3.default();
 app.set("view engine", "ejs");
 app.set("views", "./views");
-app.use(import_express2.default.static("public"));
-app.use(import_express2.default.urlencoded({ extended: true }));
+app.use(import_express3.default.static("public"));
+app.use(import_express3.default.urlencoded({ extended: true }));
 app.use("/records", api_default);
+app.use("/services", services_default);
 app.get("/", (req, res) => {
   res.render("index.ejs");
 });
