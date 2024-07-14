@@ -1,6 +1,6 @@
 services:
   web:
-    image: mostafaa8/ui:1
+    image: mostafaa8/ui:f
     restart: on-failure
     container_name: UI
     volumes:
